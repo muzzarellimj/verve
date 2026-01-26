@@ -19,7 +19,6 @@
         "url": "git+https://github.com/muzzarellimj/verve.git"
     },
     "scripts": {
-        "build": "npx tsc",
         "wdio": "wdio run ./wdio.conf.ts"
     },
     "devDependencies": {
