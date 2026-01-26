@@ -22,14 +22,21 @@ jobs:
               uses: actions/checkout@v4
               with:
                   fetch-depth: 0
+
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 'lts/*'
+
             - name: Install dependencies
-              run: npm clean-install
+              run: npm ci
+
             - name: Verify dependency integrity
               run: npm audit signatures
+
+            - name: Build
+              run: npm run build --if-present
+
             - name: Release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
