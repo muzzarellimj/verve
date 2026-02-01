@@ -38,6 +38,8 @@
         "@wdio/spec-reporter": "^9.23.2",
         "expect-webdriverio": "^5.6.3",
         "husky": "^9.1.7",
+        "lint-staged": "^16.2.7",
+        "prettier": "^3.8.1",
         "typescript": "^5.9.3"
     }
 }
